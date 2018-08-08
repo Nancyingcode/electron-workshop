@@ -34,6 +34,10 @@ function systemTime() {
     return new Date().getTime();
 }
 
+/**
+ * 获取月份天数
+ * @param {int} month 
+ */
 function printDay(month) {
     let arr = [];
     const len = checkMonth(month);
@@ -43,9 +47,39 @@ function printDay(month) {
     return arr;
 };
 
-function ajax() {
+/**
+ * 自定义ajax
+ * @param {Function} callback 
+ */
+function ajax(callback) {
+    var xmlhttp =xmlhttp=new XMLHttpRequest();
+    xmlhttp.onreadystatechange = () => {
+        if(xmlhttp.readyState==4 && xmlhttp.status==200) {
+            return callback;
+        }
+    }
+}
+
+function changeText(target){
+    target.innerText = "";
+}
+
+
+function saveDate(){
 
 }
+
+function printArr(arr,id){
+    var ele = document.getElementById(id);
+    let list = [];
+    var item = ele.innerHTML;
+    for(let i=0;i<5;i++) {
+        ele.innerHTML.push(item);
+    }
+    e.innerHTML = list;
+}
+
+
 
 console.log(year % 4);
 console.log(checkMonth(2));
