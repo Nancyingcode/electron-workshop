@@ -9,5 +9,5 @@ Doc
 
 Todo
 ---------------------------------
-electron桌面应用
-native script app
+`electron`桌面应用
+`nativescript` app
