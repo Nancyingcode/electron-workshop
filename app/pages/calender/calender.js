@@ -72,11 +72,10 @@ function saveDate(){
 function printArr(arr,id){
     var ele = document.getElementById(id);
     let list = [];
-    var item = ele.innerHTML;
     for(let i=0;i<5;i++) {
-        ele.innerHTML.push(item);
+        list.push(ele.innerHTML);
     }
-    e.innerHTML = list;
+    ele.innerHTML = list.join("");
 }
 
 
